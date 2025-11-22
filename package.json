@@ -1,0 +1,25 @@
+{
+  "name": "kafka-order-system",
+  "version": "1.0.0",
+  "description": "Kafka-based order processing system with Avro serialization",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "demo": "ts-node scripts/start-system.ts",
+    "produce": "ts-node scripts/produce-mock-orders.ts",
+    "kafka:up": "docker-compose up -d",
+    "kafka:down": "docker-compose down"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "avsc": "^5.7.7",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
